@@ -77,3 +77,7 @@ def delete_h1b_row(h1b_row_id):
     db.session.delete(h1b_row)
     db.session.commit()
     return success_response(h1b_row.serialize())
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
